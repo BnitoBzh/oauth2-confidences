@@ -1,0 +1,49 @@
+{
+    "name": "paulthebaud/oauth2-confidences",
+    "description": "Confidences OAuth 2.0 Client Provider",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Thebaud",
+            "email": "paul.thebaud29@gmail.com"
+        }
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authentication",
+        "confidences"
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "league/oauth2-client": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0.8",
+        "squizlabs/php_codesniffer": "^2.8.1",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Confidences\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Confidences\\OAuth2\\Client\\Test\\": "tests/src/"
+        }
+    },
+    "scripts": {
+        "cs-check": "php ./vendor/bin/phpcs --standard=PSR2 -v src",
+        "cs-fix": "php ./vendor/bin/phpcbf src",
+        "test-results" : "php ./vendor/bin/coveralls -v --dry-run",
+        "test" : "php ./vendor/bin/phpunit",
+        "test-all" : [
+            "@cs-check",
+            "@test",
+            "@test-results"
+        ],
+    }
+}
