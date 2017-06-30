@@ -4,15 +4,36 @@ namespace Confidences\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
+/**
+ * Class ConfidencesUser
+ *      Provide a Confidences user implementation
+ *
+ * @package Confidences\OAuth2\Client\Provider
+ * @author  Paul Thebaud
+ */
 class ConfidencesUser implements ResourceOwnerInterface
 {
+    /**
+     * The user information
+     * @var array $response
+     */
     protected $response;
 
+    /**
+     * ConfidencesUser constructor
+     *
+     * @param array $response
+     */
     public function __construct(array $response)
     {
         $this->response = $response;
     }
 
+    /**
+     * Get id
+     *
+     * @return mixed
+     */
     public function getId()
     {
         return $this->response['id'];

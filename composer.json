@@ -44,6 +44,6 @@
             "@cs-check",
             "@test",
             "@test-results"
-        ],
+        ]
     }
 }
