@@ -3,7 +3,6 @@
 namespace Confidences\OAuth2\Client\Test\Provider;
 
 use Confidences\OAuth2\Client\Provider\ConfidencesUser;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class ConfidencesUserTest
@@ -13,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @covers  \Confidences\OAuth2\Client\Provider\ConfidencesUser
  */
-class ConfidencesUserTest extends TestCase
+class ConfidencesUserTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var ConfidencesUser

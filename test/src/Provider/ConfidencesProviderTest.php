@@ -6,7 +6,6 @@ use Confidences\OAuth2\Client\Provider\ConfidencesProvider;
 use Confidences\OAuth2\Client\Provider\ConfidencesUser;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
-use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -17,7 +16,7 @@ use Psr\Http\Message\ResponseInterface;
  *
  * @covers \Confidences\OAuth2\Client\Provider\ConfidencesProvider
  */
-class ConfidencesProviderTest extends TestCase
+class ConfidencesProviderTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var ConfidencesProvider
