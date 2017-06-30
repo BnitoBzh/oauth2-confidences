@@ -1,6 +1,6 @@
 {
     "name": "paulthebaud/oauth2-confidences",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Confidences OAuth 2.0 Client Provider",
     "license": "MIT",
     "authors": [
