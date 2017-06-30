@@ -26,7 +26,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return 'https://confidences.local/oauth2/auth';
+        return 'https://confidences.co/oauth2/auth';
     }
 
     /**
@@ -38,7 +38,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return 'https://confidences.local/oauth2/token';
+        return 'https://confidences.co/oauth2/token';
     }
 
     /**
@@ -50,19 +50,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return 'https://confidences.local/api/me';
-    }
-
-    /**
-     * Return the authorization parameters
-     *
-     * @param array $options
-     *
-     * @return array
-     */
-    protected function getAuthorizationParameters(array $options)
-    {
-        return parent::getAuthorizationParameters($options);
+        return 'https://confidences.co/api/me';
     }
 
     /**
