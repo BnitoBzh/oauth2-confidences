@@ -88,7 +88,7 @@ if (!empty($_GET['error'])) {
 ## Testing
 
 ``` bash
-$ ./vendor/bin/phpunit
+$ composer test
 ```
 
 ## License
