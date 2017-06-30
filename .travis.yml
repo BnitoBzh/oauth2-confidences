@@ -5,4 +5,4 @@ php:
 - 7.0
 - 7.1
 - hhvm
-script: ./vendor/bin/phpunit
+script: php ./vendor/bin/phpunit
