@@ -32,7 +32,11 @@ class ConfidencesUserTest extends \PHPUnit_Framework_TestCase
             'firstname' => 'firstname',
             'email'     => 'email',
             'company'   => [
-                'name' => 'company_name'
+                'name'     => 'company_name',
+                'features' => [
+                    'feature1',
+                    'feature2'
+                ]
             ]
         ];
 
@@ -80,6 +84,17 @@ class ConfidencesUserTest extends \PHPUnit_Framework_TestCase
 
         $user = new ConfidencesUser([]);
         $this->assertEquals(null, $user->getCompanyName());
+    }
+
+    /**
+     * @covers  \Confidences\OAuth2\Client\Provider\ConfidencesUser::getCompanyFeatures()
+     */
+    public function testGetCompanyFeatures()
+    {
+        $this->assertEquals($this->data['company']['features'], $this->user->getCompanyFeatures());
+
+        $user = new ConfidencesUser([]);
+        $this->assertEquals([], $user->getCompanyFeatures());
     }
 
     /**

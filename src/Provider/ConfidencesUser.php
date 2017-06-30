@@ -83,6 +83,19 @@ class ConfidencesUser implements ResourceOwnerInterface
     }
 
     /**
+     * Get company features
+     *
+     * @return array
+     */
+    public function getCompanyFeatures()
+    {
+        if (! empty($this->response['company'])) {
+            return $this->response['company']['features'];
+        }
+        return [];
+    }
+
+    /**
      * Get user data as an array
      *
      * @return array
