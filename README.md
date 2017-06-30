@@ -1,8 +1,8 @@
 # Google Provider for OAuth 2.0 Client
 
-[![Build Status](https://img.shields.io/travis/paulthebaud/oauth2-confidences.svg)](https://travis-ci.org/paulthebaud/oauth2-confidences)
-[![Code Coverage](https://img.shields.io/coveralls/paulthebaud/oauth2-confidences.svg)](https://coveralls.io/r/paulthebaud/oauth2-confidences)
-[![License](https://img.shields.io/packagist/l/league/oauth2-google.svg)](https://github.com/paulthebaud/oauth2-confidences/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/paul-thebaud/oauth2-confidences.svg)](https://travis-ci.org/paul-thebaud/oauth2-confidences)
+[![Code Coverage](https://img.shields.io/coveralls/paul-thebaud/oauth2-confidences.svg)](https://coveralls.io/r/paul-thebaud/oauth2-confidences)
+[![License](https://img.shields.io/packagist/l/league/oauth2-google.svg)](https://github.com/paul-thebaud/oauth2-confidences/blob/master/LICENSE)
 [![Latest Stable Version](https://img.shields.io/packagist/v/league/oauth2-google.svg)](https://packagist.org/packages/league/oauth2-google)
 
 This package provides Confidences OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
@@ -21,7 +21,7 @@ The following versions of PHP are supported.
 To install, use composer:
 
 ```
-composer require paulthebaud/oauth2-confidences
+composer require paul-thebaud/oauth2-confidences
 ```
 
 ## Usage
@@ -96,4 +96,4 @@ $ ./vendor/bin/phpunit
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/paulthebaud/oauth2-confidences/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/paul-thebaud/oauth2-confidences/blob/master/LICENSE) for more information.
