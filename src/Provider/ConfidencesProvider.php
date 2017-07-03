@@ -2,6 +2,7 @@
 
 namespace Confidences\OAuth2\Client\Provider;
 
+use GuzzleHttp\Exception\BadResponseException;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
@@ -18,6 +19,24 @@ use Psr\Http\Message\ResponseInterface;
 class ConfidencesProvider extends AbstractProvider
 {
     use BearerAuthorizationTrait;
+
+    /**
+     * Revoke a token
+     *
+     * @param  AccessToken $token
+     *
+     * @return mixed
+     *
+     * @throws BadResponseException If the response is invalid
+     */
+    public function revokeToken(AccessToken $token)
+    {
+        $url = $this->getRevokeUrl();
+
+        $request = $this->getAuthenticatedRequest(self::METHOD_POST, $url, $token);
+
+        return $this->getParsedResponse($request);
+    }
 
     /**
      * Return the authorization url
@@ -51,6 +70,16 @@ class ConfidencesProvider extends AbstractProvider
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
         return 'https://confidences.co/api/me';
+    }
+
+    /**
+     * Return the user information url
+     *
+     * @return string
+     */
+    public function getRevokeUrl()
+    {
+        return 'https://confidences.co/oauth2/revoke';
     }
 
     /**

@@ -6,6 +6,7 @@ use Confidences\OAuth2\Client\Provider\ConfidencesProvider;
 use Confidences\OAuth2\Client\Provider\ConfidencesUser;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
+use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -26,6 +27,27 @@ class ConfidencesProviderTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->provider = new ConfidencesProvider();
+    }
+
+    /**
+     * @covers \Confidences\OAuth2\Client\Provider\ConfidencesProvider::revokeToken()
+     */
+    public function testRevokeToken()
+    {
+        $provider = $this->getMockBuilder(ConfidencesProvider::class)
+            ->setMethods(['getRevokeUrl', 'getAuthenticatedRequest', 'getParsedResponse'])
+            ->disableOriginalConstructor()->getMock();
+
+        $token = $this->createMock(AccessToken::class);
+        $request = $this->createMock(RequestInterface::class);
+
+        $provider->expects($this->once())->method('getRevokeUrl')->willReturn('url');
+        $provider->expects($this->once())->method('getAuthenticatedRequest')
+            ->with(ConfidencesProvider::METHOD_POST, 'url', $token)->willReturn($request);
+        $provider->expects($this->once())->method('getParsedResponse')
+            ->with($request)->willReturn(['response']);
+
+        $this->assertEquals(['response'], $provider->revokeToken($token));
     }
 
     /**
@@ -53,6 +75,14 @@ class ConfidencesProviderTest extends \PHPUnit_Framework_TestCase
             'https://confidences.co/api/me',
             $this->provider->getResourceOwnerDetailsUrl($this->createMock(AccessToken::class))
         );
+    }
+
+    /**
+     * @covers \Confidences\OAuth2\Client\Provider\ConfidencesProvider::getRevokeUrl()
+     */
+    public function testGetRevokeUrl()
+    {
+        $this->assertEquals('https://confidences.co/oauth2/revoke', $this->provider->getRevokeUrl());
     }
 
     /**
