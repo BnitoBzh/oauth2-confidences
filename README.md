@@ -85,6 +85,22 @@ if (!empty($_GET['error'])) {
 }
 ```
 
+### Revoke a token
+
+```php
+try {
+
+    // Assuming $token is an instance of AccessToken
+    $provider->revokeToken($token);
+
+} catch (Exception $e) {
+
+    // Failed to revoke token, maybe token expired
+    exit('Something went wrong: ' . $e->getMessage());
+
+}
+```
+
 ## Testing
 
 ``` bash
