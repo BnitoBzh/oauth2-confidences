@@ -1,11 +1,11 @@
-# Google Provider for OAuth 2.0 Client
+# Confidences Provider for OAuth 2.0 Client
 
 [![Build Status](https://img.shields.io/travis/paul-thebaud/oauth2-confidences.svg)](https://travis-ci.org/paul-thebaud/oauth2-confidences)
 [![Code Coverage](https://img.shields.io/coveralls/paul-thebaud/oauth2-confidences.svg)](https://coveralls.io/r/paul-thebaud/oauth2-confidences)
 [![License](https://img.shields.io/packagist/l/paulthebaud/oauth2-confidences.svg)](https://github.com/paul-thebaud/oauth2-confidences/blob/master/LICENSE)
 [![Latest Stable Version](https://img.shields.io/packagist/v/paulthebaud/oauth2-confidences.svg)](https://packagist.org/packages/paulthebaud/oauth2-confidences)
 
-This package provides Confidences OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides Confidences OAuth 2.0 support for the PHP League's abstract [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Requirements
 
@@ -29,7 +29,7 @@ composer require paulthebaud/oauth2-confidences
 ### Authorization Code Flow
 
 ```php
-$provider = new Confidences\OAuth2\Client\Provider\Google([
+$provider = new Confidences\OAuth2\Client\Provider\ConfidencesProvider([
     'clientId'     => '{confidences-client-id}',
     'clientSecret' => '{confidences-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url'
@@ -106,6 +106,10 @@ try {
 ``` bash
 $ composer test
 ```
+
+## Credits
+
+- This package is inspired by [oauth2-google package](https://github.com/thephpleague/oauth2-google), created by [Woody Gilk](https://github.com/shadowhand)
 
 ## License
 
