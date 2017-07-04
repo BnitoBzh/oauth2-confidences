@@ -1,10 +1,5 @@
 # Confidences Provider for OAuth 2.0 Client
 
-[![Build Status](https://img.shields.io/travis/paul-thebaud/oauth2-confidences.svg)](https://travis-ci.org/paul-thebaud/oauth2-confidences)
-[![Code Coverage](https://img.shields.io/coveralls/paul-thebaud/oauth2-confidences.svg)](https://coveralls.io/r/paul-thebaud/oauth2-confidences)
-[![License](https://img.shields.io/packagist/l/paulthebaud/oauth2-confidences.svg)](https://github.com/paul-thebaud/oauth2-confidences/blob/master/LICENSE)
-[![Latest Stable Version](https://img.shields.io/packagist/v/paulthebaud/oauth2-confidences.svg)](https://packagist.org/packages/paulthebaud/oauth2-confidences)
-
 This package provides Confidences OAuth 2.0 support for the PHP League's abstract [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Requirements
