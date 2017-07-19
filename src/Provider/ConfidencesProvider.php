@@ -23,7 +23,7 @@ class ConfidencesProvider extends AbstractProvider
     /**
      * Revoke a token
      *
-     * @param  AccessToken $token
+     * @param AccessToken $token
      *
      * @return mixed
      *

@@ -15,6 +15,7 @@ class ConfidencesUser implements ResourceOwnerInterface
 {
     /**
      * The user information
+     *
      * @var array $response
      */
     protected $response;
