@@ -28,6 +28,7 @@ $provider = new Confidences\OAuth2\Client\Provider\ConfidencesProvider([
     'clientId'     => '{confidences-client-id}',
     'clientSecret' => '{confidences-client-secret}',
     'redirectUri'  => 'https://example.com/callback-url'
+    // 'serverUrl' => 'https://confidences.local' // If you want to use a custom OAuth server (maybe for development)
 ]);
 
 if (!empty($_GET['error'])) {

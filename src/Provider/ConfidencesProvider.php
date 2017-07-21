@@ -25,7 +25,7 @@ class ConfidencesProvider extends AbstractProvider
      *
      * @var string
      */
-    protected $confidencesServerUrl = 'https://confidences.co';
+    protected $serverUrl = 'https://confidences.co';
 
     /**
      * Revoke a token
@@ -52,7 +52,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return $this->confidencesServerUrl . '/oauth2/auth';
+        return $this->serverUrl . '/oauth2/auth';
     }
 
     /**
@@ -64,7 +64,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return $this->confidencesServerUrl . '/oauth2/token';
+        return $this->serverUrl . '/oauth2/token';
     }
 
     /**
@@ -76,7 +76,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->confidencesServerUrl . '/api/me';
+        return $this->serverUrl . '/api/me';
     }
 
     /**
@@ -86,7 +86,7 @@ class ConfidencesProvider extends AbstractProvider
      */
     public function getRevokeUrl()
     {
-        return $this->confidencesServerUrl . '/oauth2/revoke';
+        return $this->serverUrl . '/oauth2/revoke';
     }
 
     /**
