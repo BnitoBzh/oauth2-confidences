@@ -1,6 +1,6 @@
 {
     "name": "confidencesapp/oauth2-confidences",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Confidences OAuth 2.0 Client Provider",
     "license": "MIT",
     "authors": [
