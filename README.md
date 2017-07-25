@@ -2,7 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/ConfidencesApp/oauth2-confidences.svg)](https://travis-ci.org/ConfidencesApp/oauth2-confidences)
-[![Code Coverage](https://coveralls.io/repos/ConfidencesApp/oauth2-confidences/badge.svg)](https://coveralls.io/r/ConfidencesApp/oauth2-confidences)
+[![Coverage Status](https://coveralls.io/repos/github/ConfidencesApp/oauth2-confidences/badge.svg)](https://coveralls.io/github/ConfidencesApp/oauth2-confidences)
 
 This package provides Confidences OAuth 2.0 support for the PHP League's abstract [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
